@@ -5,8 +5,7 @@
         <div class="welcome">
           <img src="../../assets/image/about/welcome.png" class="welcome-title" alt="" />
           <div class="subtitle">
-            <div class="guide">您还可以点击林间有风官方网站，查看更多作品</div>
-            <div class="link"><a href="https://www.talelin.com" target="_blank">https://talelin.com</a></div>
+            <div class="guide">老司机工具2.0版本,采用林间有风开源项目进行改版</div>
           </div>
         </div>
         <img class="welcome-bg" src="../../assets/image/about/header-bg.png" alt="" />
@@ -18,7 +17,7 @@
             <ul class="team-ul">
               <li>
                 <span class="shadow-box"> <i class="team-shadow"></i> </span> <span class="team-role">策划</span>
-                <span class="team-name">七月</span>
+                <span class="team-name">GDX</span>
               </li>
               <li>
                 <span class="shadow-box"> <i class="team-shadow"></i> </span> <span class="team-role">研发</span>
@@ -34,7 +33,7 @@
                     <li>西麦</li>
                   </ul>
                   <ul v-else>
-                    <li>林间有风 CMS 组</li>
+                    <li>ANDROID项目组</li>
                   </ul>
                 </span>
               </li>

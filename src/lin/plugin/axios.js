@@ -54,10 +54,15 @@ _axios.interceptors.request.use(
       })
     }
 
+    console.log('request url:' + reqConfig.url)
+
     if (!reqConfig.method) {
       // 默认使用 get 请求
       reqConfig.method = 'get'
     }
+
+    console.log('request method:' + reqConfig.method)
+
     // 大小写容错
     reqConfig.method = reqConfig.method.toLowerCase()
 
@@ -79,13 +84,16 @@ _axios.interceptors.request.use(
         if (typeof reqConfig.data[key] === 'object') {
           const item = reqConfig.data[key]
           if (item instanceof FileList || item instanceof File || item instanceof Blob) {
+            console.log('1. request contain file')
             hasFile = true
           }
         }
       })
 
+      console.log('2. request contain file')
       // 检测到存在文件使用 FormData 提交数据
       if (hasFile) {
+        console.log('3. request append key')
         const formData = new FormData()
         Object.keys(reqConfig.data).forEach(key => {
           formData.append(key, reqConfig.data[key])
@@ -97,8 +105,12 @@ _axios.interceptors.request.use(
       /* eslint-disable-next-line */
       console.warn(`其他请求类型: ${reqConfig.method}, 暂无自动处理`)
     }
+
+    console.log('4. request deal with permission')
     // step2: permission 处理
     if (reqConfig.url === 'cms/user/refresh') {
+      console.log('5. request no access token')
+
       const refreshToken = getToken('refresh_token')
       if (refreshToken) {
         // eslint-disable-next-line no-param-reassign
@@ -106,8 +118,10 @@ _axios.interceptors.request.use(
       }
     } else {
       // 有access_token
+      console.log('6. request has access token')
       const accessToken = getToken('access_token')
       if (accessToken) {
+        console.log('7. request has access token')
         // eslint-disable-next-line no-param-reassign
         reqConfig.headers.Authorization = accessToken
       }
@@ -225,6 +239,7 @@ if (!Vue.axios) {
  * @param {object} params
  */
 export function post(url, data = {}, params = {}) {
+  console.log('1. axios post file.....')
   return _axios({
     method: 'post',
     url,

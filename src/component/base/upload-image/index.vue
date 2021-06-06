@@ -17,7 +17,7 @@ todo: 文件判断使用 serveWorker 优化性能
               v-if="item.file"
               class="el-icon-upload wait-upload"
               @click.prevent.stop="delItem(item.id)"
-              title="等待上传"
+              title="等待上传......."
             ></i>
           </div>
           <div class="control">
@@ -28,7 +28,7 @@ todo: 文件判断使用 serveWorker 优化性能
             <div class="control-bottom" v-if="sortable || preview">
               <i
                 v-if="sortable && !disabled"
-                title="前移"
+                title="前移sdfdf"
                 class="control-bottom-btn el-icon-back"
                 :class="{ disabled: i === 0 }"
                 @click.stop="move(item.id, -1)"
