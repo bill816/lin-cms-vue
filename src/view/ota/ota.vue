@@ -119,6 +119,7 @@ async v_upload_files(name) {
     this.$axios({
         method: 'post',
         url: '/cms/sign_file',
+        timeout:0, //无超时
         data,
       })
         .then(async res => {
