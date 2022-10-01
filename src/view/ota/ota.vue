@@ -4,16 +4,8 @@
     <div class="lin-wrap">
       <el-form label-width="420px">
 
-    <input type="radio" checked="true" name="op_type" value="f900/" >F900 &nbsp;  </input>
-    <input type="radio" name="op_type" value="n5/" >N5 &nbsp; </input>
-    <input type="radio" name="op_type" value="n3/" >N3 &nbsp;  </input>
-    <input type="radio" name="op_type" value="n5s/" >N5s &nbsp;  </input>
-    <input type="radio" name="op_type" value="n6/" >N6 &nbsp;  </input>
-    <input type="radio" name="op_type" value="n86/" >N86 &nbsp;  </input>
-    <input type="radio" name="op_type" value="bp990/" >BP990 &nbsp;  </input>
-	  <input type="radio" name="op_type" value="p200/" >P200 &nbsp;  </input>
-	  <input type="radio" name="op_type" value="mr980/" >mr980 &nbsp; </input>
-
+    <input type="radio" checked="true" name="op_type" value="p2litese/" >p2litese &nbsp;  </input>
+    <input type="radio" name="op_type" value="p2litese/" >p2litese &nbsp; </input>
     <pre></br></pre>
     <pre></br></pre>
 
